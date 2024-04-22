@@ -86,7 +86,7 @@ post by json
      -d '{"user_id": 2, "name": "Baxtiyor"}' \
      http://localhost:8080/
 ```
-post by query
+post by form
 ```bash
 curl -X POST \
   -F "user_id=3" \
