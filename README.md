@@ -79,20 +79,23 @@ type User struct {
 }
 ```
 
-### Idea.http
+### Terminal HTTP requests
 
 ```http request
 
-### post by json
-POST localhost:8080
-Content-Type: application/json
-{ "user_id" : 2, "name": "Baxtiyor" }
+ curl -X POST -H "Content-Type: application/json" \
+     -d '{"user_id": 2, "name": "Baxtiyor"}' \
+     http://localhost:8080/
 
-### post by queries
-POST localhost:8080/?user_id=3&name=Firdavs
 
-### get list
-GET localhost:8080/
+curl -X POST \
+  -F "user_id=3" \
+  -F "name=Firdavs" \
+  http://localhost:8080/
+
+
+
+curl http://localhost:8080/
 
 ```
 
