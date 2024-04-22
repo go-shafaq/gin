@@ -6,6 +6,31 @@
 
 package json
 
+import (
+	"github.com/gin-gonic/gin/internal/defcase"
+	json "github.com/go-shafaq/encoding-json"
+)
+
+var (
+	// Marshal is exported by gin/json package.
+	Marshal = json.Marshal
+	// Unmarshal is exported by gin/json package.
+	Unmarshal = json.Unmarshal
+	// MarshalIndent is exported by gin/json package.
+	MarshalIndent = json.MarshalIndent
+	// NewDecoder is exported by gin/json package.
+	NewDecoder = json.NewDecoder
+	// NewEncoder is exported by gin/json package.
+	NewEncoder = json.NewEncoder
+	SetDefCase = func(dCase defcase.DefCase) {
+		json.SetDefCase(dCase)
+	}
+)
+
+/*
+
+package json
+
 import "github.com/bytedance/sonic"
 
 var (
@@ -21,3 +46,5 @@ var (
 	// NewEncoder is exported by gin/json package.
 	NewEncoder = json.NewEncoder
 )
+
+*/

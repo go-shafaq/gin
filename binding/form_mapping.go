@@ -7,6 +7,7 @@ package binding
 import (
 	"errors"
 	"fmt"
+	"github.com/gin-gonic/gin/internal/defcase"
 	"mime/multipart"
 	"reflect"
 	"strconv"
@@ -146,7 +147,7 @@ func tryToSetValue(value reflect.Value, field reflect.StructField, setter setter
 	tagValue, opts := head(tagValue, ",")
 
 	if tagValue == "" { // default value is FieldName
-		tagValue = field.Name
+		tagValue = defcase.Convert(tag, value.Type().PkgPath(), field.Name)
 	}
 	if tagValue == "" { // when field is "emptyField" variable
 		return false, nil

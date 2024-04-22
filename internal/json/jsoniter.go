@@ -6,7 +6,10 @@
 
 package json
 
-import jsoniter "github.com/json-iterator/go"
+import (
+	"github.com/gin-gonic/gin/internal/defcase"
+	jsoniter "github.com/json-iterator/go"
+)
 
 var (
 	json = jsoniter.ConfigCompatibleWithStandardLibrary
@@ -20,4 +23,7 @@ var (
 	NewDecoder = json.NewDecoder
 	// NewEncoder is exported by gin/json package.
 	NewEncoder = json.NewEncoder
+	SetDefCase = func(dCase defcase.DefCase) {
+		json.SetDefCase(dCase)
+	}
 )
