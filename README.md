@@ -59,7 +59,7 @@ func main() {
 
 		users[user.UserId] = &user
 		c.String(200, fmt.Sprintf(
-			"ID of %s is %d", user.Name, user.UserId))
+			"ID of %s is %d\n", user.Name, user.UserId))
 	})
 	ginS.GET("/", func(c *gin.Context) {
 		arr := make([]*User, 0)
@@ -80,23 +80,22 @@ type User struct {
 ```
 
 ### Terminal HTTP requests
-
-```http request
-
+post by json
+```bash
  curl -X POST -H "Content-Type: application/json" \
      -d '{"user_id": 2, "name": "Baxtiyor"}' \
      http://localhost:8080/
-
-
+```
+post by query
+```bash
 curl -X POST \
   -F "user_id=3" \
   -F "name=Firdavs" \
   http://localhost:8080/
-
-
-
+```
+get list
+```bash
 curl http://localhost:8080/
-
 ```
 
 
