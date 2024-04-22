@@ -7,15 +7,15 @@ package binding
 import (
 	"errors"
 	"fmt"
-	"github.com/gin-gonic/gin/internal/defcase"
+	"github.com/go-shafaq/gin/internal/defcase"
 	"mime/multipart"
 	"reflect"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/gin-gonic/gin/internal/bytesconv"
-	"github.com/gin-gonic/gin/internal/json"
+	"github.com/go-shafaq/gin/internal/bytesconv"
+	"github.com/go-shafaq/gin/internal/json"
 )
 
 var (

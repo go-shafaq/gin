@@ -7,7 +7,7 @@
 package json
 
 import (
-	"github.com/gin-gonic/gin/internal/defcase"
+	"github.com/go-shafaq/gin/internal/defcase"
 	json "github.com/go-shafaq/go-json"
 )
 

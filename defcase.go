@@ -1,8 +1,8 @@
 package gin
 
 import (
-	"github.com/gin-gonic/gin/internal/defcase"
-	"github.com/gin-gonic/gin/internal/json"
+	"github.com/go-shafaq/gin/internal/defcase"
+	"github.com/go-shafaq/gin/internal/json"
 )
 
 type DefCase = defcase.DefCase

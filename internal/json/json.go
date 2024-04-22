@@ -7,8 +7,8 @@
 package json
 
 import (
-	"github.com/gin-gonic/gin/internal/defcase"
 	json "github.com/go-shafaq/encoding-json"
+	"github.com/go-shafaq/gin/internal/defcase"
 )
 
 var (

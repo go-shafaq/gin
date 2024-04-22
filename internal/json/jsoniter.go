@@ -7,8 +7,8 @@
 package json
 
 import (
-	"github.com/gin-gonic/gin/internal/defcase"
-	jsoniter "github.com/json-iterator/go"
+	"github.com/go-shafaq/gin/internal/defcase"
+	jsoniter "github.com/go-shafaq/jsoniter"
 )
 
 var (
